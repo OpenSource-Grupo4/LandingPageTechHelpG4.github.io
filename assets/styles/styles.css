@@ -1,0 +1,1211 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+h1{font-size: 3.5em; font-family: 'IBM Plex Sans', sans-serif;}
+h2{font-size: 2.7em; font-family: 'IBM Plex Sans', sans-serif;}
+h3{font-size: 2em;   font-family: 'IBM Plex Sans', sans-serif;}
+p{font-size: 1.25em;}
+ul{list-style-type: none;}
+li{font-size: 1.25em;}
+
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(58, 58, 251);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+button:hover{
+    background-color: rgb(78, 78, 253);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 20px rgba(180, 180, 180, 0.7);
+}
+
+button:hover::before {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 1400px;
+    margin:auto;
+}
+
+header{background-color: rgb(245,245,245);}
+
+header .logo{
+    margin: 0;
+    padding: 5px 30px;
+    width: 135px;
+}
+
+
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(36, 36, 229);
+}
+
+.spain{
+    padding-top: 25px;
+}
+
+header{
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+#toolbar{
+    background-color: #72B4EF;
+}
+.components {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    background-image:  url("../img/TecHelpFondoReparacion.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white; font-size: 2.8em;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+
+#hero p {
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 30px;
+    transition: background-color 1s;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 1s;
+}
+
+input:checked + .slider {
+    background-color: #65e869;
+    transition: background-color 1s;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #65e869;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider:before {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.4s;
+}
+
+
+#dark-mode-button {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#dark-mode-button img {
+    width: 75px;
+    height: 48px;
+    margin-right: 5px;
+    padding-bottom: 18px;
+}
+
+.ingles{
+    padding-bottom: 25px;
+}
+
+
+
+  #benefit-TecHelp{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  #benefit-TecHelp h2{
+    color: rgb(0, 0, 0);
+  }
+  
+  #benefit-TecHelp .container{
+
+    padding: 200px 0 12px 12px
+  }
+  
+  #benefit-TecHelp h2 {
+    margin-top: 0;
+    font-size: 2.0em;
+  }
+  
+  #benefit-TecHelp p {
+    color: rgb(0, 0, 0);
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+  
+  
+  #benefit-TecHelp  .cart{
+    background-size: cover;
+    background-position: center center;
+  
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+  }
+  
+  
+  .cart:first-child {
+   
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    )
+  }
+  
+  
+  .cart:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    )
+  }   
+  
+ 
+  .cart:last-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    )
+  }
+  
+  .benefit{
+    text-align: center;
+    padding: 20px 1px;
+  }
+  
+  .benefit li{
+    padding: 15px 0px;
+    font-weight: bold;
+    margin-left: -25px;
+  }
+  
+  .benefit li::before {
+    content: "\2714";
+    color: rgb(137, 255, 137); 
+    margin-right: 5px; 
+  }
+
+ 
+#prices-TecHelp{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  
+  #prices-TecHelp .container{
+    padding: 100px 0 12px 12px
+  }
+  
+  #prices-TecHelp h2 {
+    margin-top: 0;
+    padding-bottom: 30px;
+    font-size: 2.0em;
+  }
+  
+  .text {
+    padding: 05px;
+  }
+  #prices-TecHelp  p {
+    
+    
+    padding-bottom: 40px; 
+  }
+  
+  #prices-TecHelp .cart2{
+    background-size: cover;
+    background-position: center center;
+  
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  
+  .components .div {
+    background-size: cover;
+    background-position: center center;
+  
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  
+  .cart2:first-child {
+      background-image: linear-gradient(
+          0deg,
+          #BBDEFB,
+          #BBDEFB
+      );
+  
+      border-radius: 5px;
+      border: 2px solid rgba(178, 178, 178, 0.522);
+  }
+  
+  .cart2:nth-child(2) {
+      background-image: linear-gradient(
+        0deg,
+        #BBDEFB,
+        #BBDEFB
+    );
+  
+    border-radius: 5px;
+    border: 2px solid rgba(178, 178, 178, 0.522);
+  }   
+  
+  .cart2:last-child {
+      background-image: linear-gradient(
+        0deg,
+        #BBDEFB,
+        #BBDEFB
+    );
+    border-radius: 5px;
+    border: 2px solid rgba(178, 178, 178, 0.522);
+  }
+  
+  .prices .cart2:first-child button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    background-color: #1E88E5;
+  }
+  
+  .prices .cart2:nth-child(2) button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    background-color: rgb(238, 228, 134);
+  }
+  
+  
+  .prices .cart2:last-child button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    background-color: #1E88E5;
+  }
+  
+  
+  .prices .cart2:first-child h3{
+    color: #000000;
+  }
+  
+  .prices .cart2:nth-child(2) h3{
+    color: rgb(224, 210, 78);
+  }
+  
+  .prices .cart2:last-child h3{
+    color: #000000;
+  }
+  
+  
+ 
+  .prices .cart2:first-child button:hover{
+    font-size: 1.50em;
+    background-color: rgba(147, 208, 255, 0.654);
+  }
+  
+  .prices .cart2:nth-child(2) button:hover{
+    font-size: 1.50em;
+    background-color: rgb(255, 244, 142);
+  }
+  
+  
+  .prices .cart2:last-child button:hover{
+    font-size: 1.50em;
+    background-color: rgba(147, 208, 255, 0.654);
+  }
+  
+  
+  
+  .cart2:first-child:hover {
+    border: 3px solid rgba(54, 224, 114, 0.495);
+  }
+  
+  .cart2:nth-child(2):hover{
+    border: 3px solid rgb(243, 232, 134);
+  }   
+  
+  .cart2:last-child:hover {
+    border: 3px solid rgba(124, 185, 231, 0.654);
+  }
+  
+  
+
+#testimony-TecHelp {
+  background-color: #0D47A1;
+  color: #ffffff;
+  text-align: center;
+}
+
+#testimony-TecHelp .container {
+  padding: 100px 0 12px 12px;
+  width: 80%;
+}
+
+#testimony-TecHelp h2 {
+  margin-top: 0;
+  font-size: 2.2em;
+}
+
+#testimony-TecHelp .cart3 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(38, 38, 38, 0.838);
+
+  
+  transition: transform 0.3s ease;
+}
+
+#testimony-TecHelp .cart3 .image-person {
+  width: 200px;
+  height: 90px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+#testimony-TecHelp .cart3 .image-person img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#testimony-TecHelp .cart3 .comentario h3,
+#testimony-TecHelp .cart3 .comentario p {
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+#testimony-TecHelp .cart3 .comentario h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#testimony-TecHelp .cart3 .comentario p {
+  font-size: 0.9em;
+}
+
+#testimony-TecHelp .cart3 .comentario .rol {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#testimony-TecHelp .cart3 p:last-child {
+  margin-top: 10px;
+}
+
+#testimony-TecHelp .cart3:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px rgb(198, 198, 198);
+}
+
+.membership {
+  color:#ffffff
+}
+
+
+#contact-TecHelp .container {
+  text-align: center;
+  padding: 100px 0 12px 12px
+}
+
+#contact-TecHelp .title-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label{
+  padding: 10px;
+}
+#contact-TecHelp h2 {
+  margin-top: 0;
+  font-size: 2.2em;
+}
+
+#contact-TecHelp p {
+  font-size: 1.1em;
+}
+
+#contact-TecHelp .form-TecHelp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-TecHelp .image-container {
+  display: none;
+  
+}
+
+.form-TecHelp .form-container {
+  flex: 1;
+  padding-right: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-TecHelp .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-TecHelp .form {
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 2px 6px rgba(80, 80, 80, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.form-TecHelp .form:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0, 57, 110, 0.5);
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000; 
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #1968d6;
+}
+
+.btn-submit {
+  background-color: #1e488b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-submit:hover {
+  background-color: #5ea8ce;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-TecHelp {
+  display: flex;
+  align-items: center;
+}
+
+.form-container {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.form {
+  background-color: #72B4EF;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#nosotros-TecHelp .container {
+  text-align: center;
+  padding: 200px 12px; 
+}
+
+#nosotros-TecHelp h2 {
+  margin-top: 0;
+  font-size: 2.2em;
+  color: #000000; 
+}
+
+#nosotros-TecHelp  iframe{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 40vh;
+}
+
+#nosotros-TecHelp  iframe:hover{
+  opacity: 0.9; 
+}
+
+
+#footer-TecHelp {
+  background-color: #72B4EF;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image-footer {
+  width: 150px; 
+}
+
+.column2,
+.column3,
+.column4 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.column2 label{
+  color: white;
+}
+
+
+.column4 {
+  max-width: 400px;
+  display: inline-block;;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nets,
+.download-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-download {
+  margin-top: 20px;
+}
+
+.social-download > div {
+  margin: 10px;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+.options li:hover {
+  font-weight: bold;
+}
+
+.options li a {
+  color: white;
+  text-decoration: none;
+}
+.nets li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.play-store {
+  margin-top: 10px;
+}
+
+.title {
+  color: white;
+  font-weight: bold;
+}
+
+
+@media (min-width: 720px) {
+  
+  header{
+    
+    position: fixed;
+    width: 100%;
+  }
+
+  header .container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+
+  header nav a {
+    font-size: 20px; 
+  }
+
+  .spain{
+    padding-top: 5px;
+    margin-left: 15px;
+  }
+
+  .switch {
+    margin-left: 1px; 
+    margin-right: 2px; 
+    margin-top: 5px;
+  }
+
+  #hero {
+    height: 115vh; 
+  }
+
+  #hero h1{
+    font-size: 5em;
+  }
+
+
+
+
+   
+  #benefit-TecHelp .benefit {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #benefit-TecHelp p {
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  #benefit-TecHelp h2 {
+    font-size: 4em;
+  }
+  
+  #benefit-TecHelp h3 {
+    margin-top: 0;
+  }
+  
+  #benefit-TecHelp .cart {
+    padding: 80px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .cart ul {
+    margin-top: 210px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .cart ul li {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+
+  
+  #prices-TecHelp .prices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #prices-TecHelp .container{
+    padding: 100px 0 12px 12px
+  }
+    
+  #prices-TecHelp .cart2 {
+    padding: 40px;
+    background-color: #BBDEFB;
+    flex: 1 1 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+
+  #prices-TecHelp .cart2:hover {
+    transform: scale(1.05); 
+  }
+
+  #prices-TecHelp .cart2:first-child:hover {
+    box-shadow: 2px 2px 10px rgba(54, 224, 114, 0.495);
+  }
+
+  #prices-TecHelp .cart2:nth-child(2):hover {
+    box-shadow: 2px 2px 10px rgba(243, 232, 134, 0.495);
+  }
+
+  #prices-TecHelp .cart2:last-child:hover {
+    box-shadow: 2px 2px 10px rgba(124, 185, 231, 0.654);
+  }
+
+    
+  #prices-TecHelp h2 {
+    font-size: 2.5em;
+  }
+  
+  #prices-TecHelp p {
+    margin-bottom: 15px;
+  }
+  
+  #prices-TecHelp .cart2 button {
+    margin-top: auto; 
+  }
+
+  .image-comp{
+    height: 50px;
+    width: 50px;
+    padding: auto;
+  }
+.play-store {
+  margin-top: 10px;
+}
+
+
+
+  #acerca-TecHelp .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  #acerca-TecHelp h2 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  #acerca-TecHelp .aboutTheApp-video {
+    flex-basis: 50%;
+  }
+  
+  #acerca-TecHelp .texto {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  #acerca-TecHelp .texto h2 {
+    margin-bottom: 20px;
+  }
+
+  
+  #acerca-TecHelp p{
+    padding: 30px 30px; 
+  }
+  
+  #acerca-TecHelp iframe{
+    height: 50vh;
+  }
+
+
+
+  #acerca-TecHelp .logos {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+  }
+  
+  #acerca-TecHelp .logos img {
+    max-width: 100%;
+  }
+  
+  #acerca-TecHelp .logos .play-store {
+    margin-left: 470px;
+  }
+
+    
+  #acerca-TecHelp .logos .app-store {
+    margin-right: 400px;
+  }
+  
+  @media (max-width: 1250px) {
+    #acerca-TecHelp .logos {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    #acerca-TecHelp .logos .play-store {
+      margin-left: 0;
+    }
+  
+      
+    #acerca-TecHelp .logos .app-store {
+      margin-right: 0;
+    }
+    
+    #acerca-TecHelp .logos img {
+      max-width: 100%;
+      margin: 0 5px;
+    }
+    
+    #acerca-TecHelp .play-store {
+      margin-right: 5px; 
+    }
+  }
+
+
+
+
+  #testimony-TecHelp .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #testimony-TecHelp h2 {
+    margin-bottom: 20px;
+  }
+
+  #testimony-TecHelp .testimony {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+  }
+
+  #testimony-TecHelp .cart3 {
+    flex-basis: 400px;
+    background-color: rgba(58, 58, 58, 0.838);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #testimony-TecHelp .cart3 .image-person {
+    width: 200px;
+    height: 90px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  
+  #testimony-TecHelp .image-person img {
+    width: 100%;
+    border-radius: 60%;
+    object-fit: cover;
+  }
+
+
+
+  #testimony-TecHelp .comentario h3 {
+    margin-top: 10px;
+  }
+
+  #testimony-TecHelp .comentario p {
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+  
+  #contact-TecHelp .form-TecHelp {
+    justify-content: space-between; 
+  }
+  
+  #contact-TecHelp .image-container {
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-end; 
+  }
+  
+  #contact-TecHelp .form-container {
+    flex: 1; 
+    padding-right: 50px; 
+  }
+
+  #contact-TecHelp .image-container img {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  #contact-TecHelp p{
+    padding-bottom: 10px;
+  }
+
+
+
+  
+  #nosotros-TecHelp  iframe{
+    padding: 0 20px;
+    width: 70%;
+    height: 60vh;
+  }
+   
+
+
+  
+  .container-body {
+    flex-direction: row;
+  }
+
+  .column1 {
+    flex-basis: 25%;
+  }
+
+  .column2,
+  .column3,
+  .column4 {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .row img {
+    margin-right: 10px;
+  }
+
+  .column4 .title {
+    margin-bottom: 10px;
+  }
+
+  .nets {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .nets li {
+    margin-right: 10px;
+  }
+
+  .download-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-right: 120px;
+  }
+
+  .download-footer li {
+    margin-left: 10px;
+  }
+
+
+
+.RandP {
+  background: #ffffff;
+  padding: 20px;
+}
+
+.RandP-title {
+  color: #1e488b;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+}
+
+.cardsP {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardP {
+  background: #1e488b;
+  border-radius: 35px;
+  margin: 20px auto; 
+  padding: 15px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+
+}

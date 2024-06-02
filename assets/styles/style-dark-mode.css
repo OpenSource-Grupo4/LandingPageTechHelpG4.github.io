@@ -1,0 +1,106 @@
+.dark-mode {
+    background-color:  #2a2a2a;
+}
+
+.dark-mode header .logo{
+/*filter: brightness(35%) invert(100%);*/
+opacity: 0.9;
+}
+
+.dark-mode #toolbar {
+    background-color: #555555;
+}
+
+.dark-mode header a{
+    color: rgb(255, 255, 255,0.8);
+}
+
+.dark-mode header a:hover{
+    color: rgba(146, 146, 255, 0.929);
+}
+
+.dark-mode #dark-mode-button{
+    filter: invert(1);
+}
+
+.dark-mode #hero h1{
+    color: rgb(255, 255, 255,0.9);
+}
+
+/*Testimonios*/
+
+
+.dark-mode #testimonios-TecHelp {
+    background-color: #202020;
+    color: rgb(255, 255, 255,0.7); 
+}
+
+.dark-mode #testimonios-TecHelp .carta3 {
+    background-color: rgba(94, 94, 94, 0.838);
+}
+
+.dark-mode #testimonios-TecHelp .carta3 .comentario h3,
+#testimonios-TecHelp .carta3 .comentario p {
+  margin: 0;
+  color: rgba(255, 255, 255,0.8);
+}
+
+#testimonios-TecHelp .carta3:hover {
+    box-shadow: none;
+}
+
+/*Contacto*/
+.dark-mode #contacto-TecHelp {
+    background-color: #202020;
+    color: rgb(255, 255, 255,0.7); 
+}
+
+.dark-mode .form h1 {
+    color: rgb(255, 255, 255,0.9); 
+}
+
+.dark-mode .formulario-TecHelp .form {
+    background-color: #555555;
+    box-shadow: none;
+}
+
+
+.dark-mode .btn-submit {
+    color: rgb(82, 82, 82);
+    background-color: rgb(255, 255, 255,0.7);
+}
+
+.dark-mode .btn-submit:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+
+
+
+/*Sobre Nosotros*/
+.dark-mode #nosotros-TecHelp {
+    background-color: #202020;
+}
+.dark-mode #nosotros-TecHelp h2 {
+    color: rgb(255, 255, 255,0.7); 
+}
+
+
+/*Footer*/
+.dark-mode #footer-TecHelp {
+    background-color: #2a2a2a;
+}
+
+@media (min-width: 720px) {
+    .dark-mode #precios-TecHelp .carta2:first-child:hover {
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    .dark-mode #precios-TecHelp .carta2:nth-child(2):hover {
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    .dark-mode #precios-TecHelp .carta2:last-child:hover {
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+    }
+}
